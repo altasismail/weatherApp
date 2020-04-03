@@ -26,7 +26,7 @@ async function main (withIP = true){
     }else{
         city = document.querySelector("#city").textContent;
     }
-        const meteo = await fetch('http://api.openweathermap.org/data/2.5/weather?q=Aix-En-Provence&appid=849a9c871e0d1d0fd824b853f421f60e&lang=en&units=metric')
+        const meteo = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=849a9c871e0d1d0fd824b853f421f60e&lang=en&units=metric`)
                 .then(resultat => resultat.json())
                 .then(json => json);
         console.log(meteo);    
